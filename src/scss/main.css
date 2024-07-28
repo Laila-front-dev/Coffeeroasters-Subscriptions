@@ -1237,7 +1237,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block: 2.5rem;
   }
 }
 
@@ -1597,7 +1596,7 @@ p[data-type=order] {
 }
 
 .hero__section {
-  height: 500px;
+  height: 600px;
   margin-block-end: 3.719rem;
   display: flex;
   justify-content: center;
