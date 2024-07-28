@@ -1,0 +1,55 @@
+@use "../abstracts/" as *;
+
+.services__card {
+  width: 279px;
+  padding-block: 3.75rem;
+  border-radius: 8px;
+  &:first-child {
+    margin-block-start: 3.75rem;
+    @include mq(medium) {
+      margin-block-start: calc(9.375rem + 4.563rem);
+    }
+    @include mq(large) {
+      margin-block-start: 0rem;
+    }
+  }
+  @include mq(medium) {
+    width: 573px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    padding-inline: 2rem;
+    padding-block-start: 2.625rem;
+    padding-block-end: calc(2.625rem - 0.5rem);
+    img {
+      position: relative;
+      width: 56px;
+      object-fit: contain;
+      margin-inline-end: 3rem;
+      top: 50%;
+      transform: translateY(-35%);
+      @include mq(large) {
+        width: fit-content;
+        top: 0;
+        transform: translateY(0);
+        margin-inline-end: 0rem;
+      }
+    }
+  }
+  @include mq(large) {
+    width: 350px;
+    display: block;
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+.work__card {
+  padding-block: 5rem;
+  @include mq(medium) {
+    display: grid;
+    grid-auto-flow: column;
+    padding-block-end: 0rem;
+  }
+}

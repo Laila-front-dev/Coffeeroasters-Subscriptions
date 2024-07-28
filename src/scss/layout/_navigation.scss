@@ -1,0 +1,79 @@
+@use "../abstracts/" as *;
+
+.menu__toggle {
+  position: absolute;
+  width: fit-content;
+  top: 1.125rem;
+  right: 0rem;
+  padding: 1rem;
+  cursor: pointer;
+
+  &:focus {
+    outline: solid;
+  }
+  &[aria-expanded="false"] {
+    background-image: url("/public/assets/images/shared/mobile/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &[aria-expanded="true"] {
+    background-image: url("/public/assets/images/shared/mobile/icon-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @include mq(medium) {
+    display: none;
+  }
+}
+
+.primary__navigation {
+  position: fixed;
+  padding-block: 2rem;
+  background: rgb(254, 252, 247);
+  background: linear-gradient(
+    0deg,
+    hsla(43, 78%, 98%, 0.5%) 25%,
+    hsl(254, 100%, 100%) 50%
+  );
+  inset: 10% 0% 24% 0%;
+  z-index: 9999;
+
+  &[data-visibility="false"] {
+    // display: none;
+    @include mq(medium) {
+      position: relative;
+      // display: block;
+      display: flex;
+      gap: 1rem;
+      inset: 0;
+      background: transparent;
+    }
+  }
+}
+
+.primary__navigation {
+  transition: transform 350ms ease-out;
+  &[data-visibility="false"] {
+    transform: translateX(700px);
+    z-index: 9999;
+    @include mq(medium) {
+      transform: translateX(0);
+    }
+  }
+}
+
+.primary__navigation.show-menu {
+  &[data-visibility="true"] {
+    transform: translateX(0px);
+  }
+}
+
+.visually__hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

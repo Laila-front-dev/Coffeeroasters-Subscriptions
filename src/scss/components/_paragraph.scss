@@ -1,0 +1,62 @@
+@use "../abstracts/" as *;
+
+p {
+  max-width: 34ch;
+  margin-inline: auto;
+  font-size: $font-size-100;
+  line-height: 25px;
+  font-weight: $fw-regular;
+  color: $color-neutral-50;
+  @include mq(medium) {
+    max-width: 45ch;
+    margin-inline: 0;
+  }
+  &[data-type="wide"] {
+    color: $color-primary-800;
+    @include mq(medium) {
+      max-width: 27vh;
+    }
+    @include mq(large) {
+      max-width: 24vh;
+      margin-inline: auto;
+    }
+  }
+  &[data-type="secondary"] {
+    max-width: 25ch;
+    @include mq(medium) {
+      max-width: 41ch;
+    }
+    @include mq(large) {
+      max-width: 29ch;
+      margin-inline: auto;
+    }
+  }
+  &[data-type="primary"] {
+    color: $color-primary-800;
+    max-width: 38ch;
+    @include mq(large) {
+      max-width: 59ch;
+    }
+  }
+}
+
+.about__us .d__grid:not(:nth-child(1)) p {
+  &[data-type="primary"] {
+    color: $color-neutral-50;
+    @include mq(medium) {
+      max-width: 60ch;
+      margin-inline: auto;
+    }
+    @include mq(large) {
+      margin-inline: 0;
+    }
+  }
+}
+
+p[data-type="order"] {
+  font-family: $ff-secondary;
+  font-size: 1.5rem;
+  line-height: 40px;
+  color: $color-neutral-50;
+  font-weight: $fw-black;
+}

@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+
+.services__section {
+  position: relative;
+  padding-block-start: 3.719rem;
+  text-align: center;
+  color: $color-neutral-50;
+  .services__datails {
+    height: 902px;
+    padding-block: 3.75rem;
+    border-radius: 10px;
+    @include mq(medium) {
+      height: 573px;
+      p {
+        margin-inline: auto;
+        max-width: 59ch;
+      }
+    }
+    @include mq(large) {
+      height: 577px;
+      padding-block: 6.25rem;
+    }
+  }
+  .services__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-block: calc(23.125rem + 5.125rem);
+    @include mq(medium) {
+      margin-block: 12.125rem;
+    }
+    @include mq(large) {
+      display: flex;
+      margin-block: calc(6.375rem + 10.375rem);
+    }
+    img {
+      padding-block-end: 3.75rem;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@use "../abstracts/" as *;
+
+.about__details {
+  padding-block-start: 2rem;
+  @include mq(large) {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+}
+
+.about__us .d__grid:not(:nth-child(1)) {
+  margin-block: 7.5rem;
+  img {
+    width: 279px;
+    height: 156px;
+    object-fit: contain;
+    @include mq(medium) {
+      width: 573px;
+      height: 320px;
+    }
+    @include mq(large) {
+      width: 445px;
+      height: 474px;
+    }
+  }
+  .about__details {
+    position: relative;
+    padding-block-start: calc(5rem + 4.125rem);
+    background-color: $color-primary-800;
+    color: $color-neutral-50;
+    border-radius: 10px;
+    z-index: -1;
+    @include mq(medium) {
+      padding-block-start: calc(9rem + 6.125rem);
+    }
+    @include mq(large) {
+      padding-block-start: 5.625rem;
+      padding-inline-start: 5rem;
+      justify-content: start;
+    }
+  }
+}

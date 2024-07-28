@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+
+.heading__1 {
+  font-family: $ff-secondary;
+  font-size: $font-size-700;
+  font-weight: $fw-black;
+  line-height: 48px;
+  letter-spacing: 1px;
+  @include mq(medium) {
+    max-width: 10ch;
+  }
+  @include mq(large) {
+    line-height: 72px;
+  }
+}
+
+.heading__2 {
+  font-family: $ff-secondary;
+  font-size: $font-size-600;
+  font-weight: $fw-black;
+  line-height: 28px;
+}
+
+.heading__3 {
+  font-family: $ff-secondary;
+  font-size: $font-size-400;
+  font-weight: $fw-black;
+  line-height: 32px;
+}

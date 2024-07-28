@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+.section__contact {
+  text-align: center;
+  padding-block-end: 3.125rem;
+  ul {
+    padding-block-start: 4.5rem;
+  }
+  .adresse__details {
+    li {
+      font-family: $ff-base;
+      font-size: 1rem;
+      color: $color-primary-400;
+      font-weight: $fw-regular;
+    }
+  }
+}

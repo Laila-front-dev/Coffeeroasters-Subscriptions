@@ -1,0 +1,70 @@
+@use "../abstracts/" as *;
+
+.collections__section {
+  position: relative;
+  padding-block-start: 4.657rem;
+  padding-block-end: 3.719rem;
+  @include mq(medium) {
+    // padding-block-start: 4.657rem;
+    // padding-block-end: 3.719rem;
+  }
+  &::before {
+    content: "our collection";
+    position: absolute;
+    padding-block: 2rem;
+    top: 0;
+    font-family: $ff-secondary;
+    font-size: 2.5rem;
+    font-weight: $fw-black;
+    background: -webkit-linear-gradient(#979797, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: -1;
+    @include mq(medium) {
+      font-size: 6.5rem;
+    }
+    @include mq(large) {
+      font-size: 9.375rem;
+    }
+  }
+  .collection {
+    text-align: center;
+    &:first-child {
+      padding-block-start: 2.938rem;
+      @include mq(large) {
+        padding-block-start: 5rem;
+        text-align: center;
+      }
+    }
+    @include mq(medium) {
+      width: fit-content;
+      margin-inline: auto;
+      display: flex;
+      text-align: start;
+    }
+    @include mq(large) {
+      padding-block-start: 5rem;
+      display: block;
+      text-align: center;
+    }
+  }
+  img {
+    width: 200px;
+    height: 151px;
+    object-fit: contain;
+    @include mq(medium) {
+      width: 255px;
+      height: 193px;
+    }
+  }
+}
+
+span,
+label,
+.section__contact li,
+.link__question li {
+  font-family: $ff-secondary;
+  font-size: $font-size-400;
+  font-weight: $fw-black;
+  line-height: 32px;
+}

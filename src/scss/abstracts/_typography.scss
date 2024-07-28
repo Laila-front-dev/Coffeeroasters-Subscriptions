@@ -1,0 +1,64 @@
+$ff-base: "Barlow", sans-serif;
+
+$ff-secondary: "Fraunces", serif;
+
+$ff-body: $ff-base;
+
+$font-sizes: (
+  "small": (
+    "100": 0.938rem,
+    //  * paragraph
+    "200": 1.125rem,
+    //  * button
+    "300": 1.5rem,
+    //  * navigation
+    "400": 1.5rem,
+    // heading 4
+    "500": 1.75rem,
+    // heading 3
+    "600": 1.75rem,
+    // heading 2
+    "700": 2.5rem,
+    // heading 1
+  ),
+  "medium": (
+    "300": 0.75rem,
+    //  * navigation
+    "600": 2rem,
+    // heading 2
+    "700": 3rem,
+    // heading 1
+  ),
+  "large": (
+    "500": 2rem,
+    // heading 3
+    "600": 2.5rem,
+    // heading 2
+    "700": 4.5rem,
+    // heading 1
+    "800": 9.375rem,
+    // Title Alternate Big
+  ),
+);
+
+$font-size-100: var(--fs-100);
+$font-size-200: var(--fs-200);
+$font-size-300: var(--fs-300);
+$font-size-400: var(--fs-400);
+$font-size-500: var(--fs-500);
+$font-size-600: var(--fs-600);
+$font-size-700: var(--fs-700);
+$font-size-800: var(--fs-800);
+$font-size-900: var(--fs-900);
+
+$fs-body: $font-size-100;
+
+$-fw-400: 400;
+$-fw-700: 700;
+$-fw-900: 900;
+
+$fw-regular: $-fw-400;
+$fw-bold: $-fw-700;
+$fw-black: $-fw-900;
+
+$fw-body: $fw-regular;

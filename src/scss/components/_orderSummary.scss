@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+.order__summary {
+  padding-block: 1.688rem;
+  padding-inline: 2.75rem;
+  background-color: $color-primary-800;
+  border-radius: 8px;
+  .title {
+    font-family: $ff-base;
+    font-weight: $fw-regular;
+    font-size: 1rem;
+    color: $color-primary-400;
+    text-transform: uppercase;
+  }
+  span {
+    display: inline-block;
+    color: $color-accent-600;
+  }
+}
+
+.section__question,
+.section__contact {
+  padding-block-end: 3.719rem;
+  @include mq(large) {
+    padding-block-end: 6.25rem;
+  }
+}

@@ -1,0 +1,42 @@
+@use "../abstracts/" as *;
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+  margin-block: 3.719rem;
+  padding-block: 3.125rem;
+
+  nav {
+    @include mq(medium) {
+      margin-block-start: -3rem;
+    }
+    @include mq(large) {
+      margin-block-start: 0rem;
+    }
+    ul {
+      @include mq(medium) {
+        display: flex;
+        gap: 2rem;
+      }
+      li {
+        margin-block: 1.5rem;
+        a {
+          font-family: $ff-base;
+          color: #83888f !important;
+          text-transform: uppercase;
+          display: grid;
+          gap: 2rem;
+        }
+      }
+    }
+  }
+  @include mq(large) {
+    margin-block: 6.25rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

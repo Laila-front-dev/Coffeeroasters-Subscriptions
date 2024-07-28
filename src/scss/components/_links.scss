@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+nav {
+  a {
+    font-family: $ff-secondary;
+    font-weight: $fw-black;
+    text-transform: capitalize;
+    @include mq(medium) {
+      font-family: $ff-base;
+      text-transform: uppercase;
+      color: $color-primary-400;
+    }
+  }
+}

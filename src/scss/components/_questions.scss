@@ -1,0 +1,73 @@
+@use "../abstracts/" as *;
+
+.plan__work {
+  padding-block-start: 1rem;
+  padding-inline: 4rem;
+  background-color: $color-primary-800;
+  color: $color-neutral-50;
+  border-radius: 8px;
+  p {
+    color: $color-neutral-50;
+  }
+  button,
+  h2 {
+    display: none;
+  }
+}
+
+.questions {
+  padding-block-start: 10.5rem;
+}
+.question {
+  position: relative;
+  @include mq(large) {
+    display: grid;
+    grid-template-columns: 462px 1fr;
+  }
+  .link__question {
+    display: none;
+    @include mq(large) {
+      // position: absolute;
+      width: 462px;
+      display: flex;
+      padding-inline-start: 5rem;
+      // justify-content: center;
+
+      ul li {
+        border-bottom: 1px solid #83888f;
+        padding-block-end: 2rem;
+      }
+      ul li:not(:first-child) {
+        padding-block-start: 2rem;
+      }
+      span {
+        display: flex;
+        gap: 1.5rem;
+      }
+    }
+  }
+}
+
+.answers {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+  ul {
+    overflow: hidden;
+  }
+  &.active {
+    grid-template-rows: 1fr;
+  }
+}
+
+svg.active {
+  transform: rotate(180deg);
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="radio" i] {
+  display: none;
+}

@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+.services__work {
+  padding-block-start: calc(38rem + 7.125rem);
+  padding-block-end: 3.719rem;
+  text-align: center;
+  @include mq(medium) {
+    padding-block-start: calc(19.125rem + 9.063rem);
+    text-align: start;
+  }
+  @include mq(large) {
+    padding-block-start: calc(8.188rem + 12.5rem);
+    text-align: start;
+    padding-block-end: 6.25rem;
+  }
+  p {
+    @include mq(large) {
+      max-width: 28vh;
+      margin-inline: 0;
+    }
+  }
+}

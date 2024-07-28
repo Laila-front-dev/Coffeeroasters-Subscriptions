@@ -1,0 +1,31 @@
+$-clr-grey-blue-800: hsl(215, 19%, 25%);
+$-clr-gran-600: hsl(179, 81%, 29%);
+$-clr-grey-400: hsl(215, 5%, 54%);
+$-clr-pale-orange-100: hsl(25, 94%, 86%);
+$-clr-light-gream-50: hsl(43, 78%, 98%);
+
+$light: (
+  "neutral": (
+    "50": $-clr-light-gream-50,
+  ),
+  "accent": (
+    "100": $-clr-pale-orange-100,
+    "600": $-clr-gran-600,
+  ),
+  "primary": (
+    "800": $-clr-grey-blue-800,
+    "400": $-clr-grey-400,
+  ),
+);
+
+$color-neutral-50: var(--neutral-50);
+
+$color-accent-600: var(--accent-600);
+$color-accent-100: var(--accent-100);
+
+$color-primary-800: var(--primary-800);
+$color-primary-400: var(--primary-400);
+
+$body-text-color: $color-primary-800;
+$body-bg-color: $color-neutral-50;
+//
