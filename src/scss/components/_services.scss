@@ -16,6 +16,10 @@
         max-width: 59ch;
       }
     }
+    @include mq(large) {
+      height: 577px;
+      padding-block: 6.25rem;
+    }
   }
   @include mq(large) {
     height: 577px;
@@ -32,7 +36,8 @@
     }
     @include mq(large) {
       display: flex;
-      margin-block: calc(6.375rem + 10.375rem);
+      // margin-block: 6.375rem;
+      margin-block: calc(13.375rem + 9rem);
     }
     img {
       padding-block-end: 3.75rem;

@@ -9,7 +9,8 @@
     text-align: start;
   }
   @include mq(large) {
-    padding-block-start: calc(8.188rem + 12.5rem);
+    // padding-block-start: 12.5rem;
+    padding-block-start: calc(12rem + 15.5rem);
     text-align: start;
     padding-block-end: 6.25rem;
   }

@@ -1807,6 +1807,12 @@ nav a {
   }
 }
 @media screen and (min-width: 75em) {
+  .services__section .services__datails {
+    height: 577px;
+    padding-block: 6.25rem;
+  }
+}
+@media screen and (min-width: 75em) {
   .services__section {
     height: 577px;
     padding-block: 6.25rem;
@@ -1827,7 +1833,7 @@ nav a {
 @media screen and (min-width: 75em) {
   .services__section .services__content {
     display: flex;
-    margin-block: 16.75rem;
+    margin-block: 22.375rem;
   }
 }
 .services__section .services__content img {
@@ -1936,7 +1942,7 @@ label,
 }
 @media screen and (min-width: 75em) {
   .services__work {
-    padding-block-start: 20.688rem;
+    padding-block-start: 27.5rem;
     text-align: start;
     padding-block-end: 6.25rem;
   }
