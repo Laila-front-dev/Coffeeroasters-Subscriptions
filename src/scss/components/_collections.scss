@@ -4,9 +4,9 @@
   position: relative;
   padding-block-start: 4.657rem;
   padding-block-end: 3.719rem;
-  @include mq(medium) {
+  @include mq(large) {
     // padding-block-start: 4.657rem;
-    // padding-block-end: 3.719rem;
+    padding-block-end: 6.25rem;
   }
   &::before {
     content: "our collection";

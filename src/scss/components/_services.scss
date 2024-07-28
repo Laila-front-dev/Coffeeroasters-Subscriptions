@@ -16,10 +16,10 @@
         max-width: 59ch;
       }
     }
-    @include mq(large) {
-      height: 577px;
-      padding-block: 6.25rem;
-    }
+  }
+  @include mq(large) {
+    height: 577px;
+    padding-block: 6.25rem;
   }
   .services__content {
     position: absolute;

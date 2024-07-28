@@ -1807,7 +1807,7 @@ nav a {
   }
 }
 @media screen and (min-width: 75em) {
-  .services__section .services__datails {
+  .services__section {
     height: 577px;
     padding-block: 6.25rem;
   }
@@ -1838,6 +1838,11 @@ nav a {
   position: relative;
   padding-block-start: 4.657rem;
   padding-block-end: 3.719rem;
+}
+@media screen and (min-width: 75em) {
+  .collections__section {
+    padding-block-end: 6.25rem;
+  }
 }
 .collections__section::before {
   content: "our collection";
