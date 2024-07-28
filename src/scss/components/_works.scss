@@ -21,20 +21,22 @@
     }
   }
   .line {
-    position: relative;
-    width: 760px;
-    height: 1px;
-    margin-block: 6rem;
-    background-color: #fdd6ba;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .cercle {
+    @include mq(medium) {
       position: relative;
-      width: 31px;
-      height: 31px;
-      border-radius: 50%;
-      border: 1px solid #0e8784;
+      width: 760px;
+      height: 1px;
+      margin-block: 6rem;
+      background-color: #fdd6ba;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .cercle {
+        position: relative;
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        border: 1px solid #0e8784;
+      }
     }
   }
 }

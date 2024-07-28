@@ -1953,22 +1953,24 @@ label,
     margin-inline: 0;
   }
 }
-.services__work .line {
-  position: relative;
-  width: 760px;
-  height: 1px;
-  margin-block: 6rem;
-  background-color: #fdd6ba;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.services__work .line .cercle {
-  position: relative;
-  width: 31px;
-  height: 31px;
-  border-radius: 50%;
-  border: 1px solid #0e8784;
+@media screen and (min-width: 48em) {
+  .services__work .line {
+    position: relative;
+    width: 760px;
+    height: 1px;
+    margin-block: 6rem;
+    background-color: #fdd6ba;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .services__work .line .cercle {
+    position: relative;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    border: 1px solid #0e8784;
+  }
 }
 
 .section__contact {
