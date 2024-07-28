@@ -47,6 +47,11 @@
       display: block;
       text-align: center;
     }
+    .flow {
+      @include mq(large) {
+        padding-block-start: 4.5rem;
+      }
+    }
   }
   img {
     width: 200px;

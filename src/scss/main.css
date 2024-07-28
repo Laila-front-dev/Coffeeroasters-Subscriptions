@@ -1890,6 +1890,11 @@ nav a {
     text-align: center;
   }
 }
+@media screen and (min-width: 75em) {
+  .collections__section .collection .flow {
+    padding-block-start: 4.5rem;
+  }
+}
 .collections__section img {
   width: 200px;
   height: 151px;
