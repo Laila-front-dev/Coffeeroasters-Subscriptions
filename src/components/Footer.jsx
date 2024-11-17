@@ -19,17 +19,17 @@ function Footer() {
       <nav>
         <ul>
           <li>
-            <NavLink style={navLinks} to="/">
+            <NavLink style={navLinks} to="/Coffeeroasters-Subscriptions/">
               home
             </NavLink>
           </li>
           <li>
-            <NavLink style={navLinks} to="/about">
+            <NavLink style={navLinks} to="/Coffeeroasters-Subscriptions/about">
               about us
             </NavLink>
           </li>
           <li>
-            <NavLink style={navLinks} to="/create">
+            <NavLink style={navLinks} to="/Coffeeroasters-Subscriptions/create">
               create your plan
             </NavLink>
           </li>
