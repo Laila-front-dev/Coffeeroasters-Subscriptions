@@ -1290,7 +1290,7 @@ body {
   transition: transform 350ms ease-out;
 }
 .primary__navigation[data-visibility=false] {
-  transform: translateX(700px);
+  transform: translateX(1000px);
   z-index: 9999;
 }
 @media screen and (min-width: 48em) {
@@ -1461,7 +1461,6 @@ footer nav ul li {
 }
 footer nav ul li a {
   font-family: "Barlow", sans-serif;
-  color: #83888f !important;
   text-transform: uppercase;
   display: grid;
   gap: 2rem;
@@ -1593,6 +1592,9 @@ p[data-type=order] {
   border-radius: 6px;
   transition: background-color 350ms ease-out;
   cursor: pointer;
+}
+.button:hover {
+  background-color: #66d2cf;
 }
 
 .hero__section {
@@ -1955,8 +1957,8 @@ label,
 }
 @media screen and (min-width: 48em) {
   .services__work .line {
+    max-width: 697px;
     position: relative;
-    width: 760px;
     height: 1px;
     margin-block: 6rem;
     background-color: #fdd6ba;
@@ -1970,6 +1972,11 @@ label,
     height: 31px;
     border-radius: 50%;
     border: 1px solid #0e8784;
+  }
+}
+@media screen and (min-width: 75em) {
+  .services__work .line {
+    max-width: 843px;
   }
 }
 

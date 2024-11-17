@@ -9,17 +9,17 @@ function Links() {
   return (
     <>
       <li>
-        <NavLink style={navLinks} to="/Coffeeroasters-Subscriptions/">
+        <NavLink style={navLinks} to="/">
           home
         </NavLink>
       </li>
       <li>
-        <NavLink style={navLinks} to="/Coffeeroasters-Subscriptions/about">
+        <NavLink style={navLinks} to="/about">
           about us
         </NavLink>
       </li>
       <li>
-        <NavLink style={navLinks} to="/Coffeeroasters-Subscriptions/create">
+        <NavLink style={navLinks} to="/create">
           creat your plan
         </NavLink>
       </li>

@@ -57,6 +57,8 @@ export function Accordion(props) {
                 style={{
                   paddingBlock: "1.5rem",
                   cursor: "pointer",
+                  display: "flex",
+                  flexDirection: "column",
                   backgroundColor:
                     answer.id === changeColor ? "#0E8784" : "#F4F1EB",
                   color: answer.id === changeColor ? "#F4F1EB" : "#333D4B",
@@ -71,15 +73,25 @@ export function Accordion(props) {
                   />
                   {answer.name}
                 </label>
-                <p
+                <label
+                  id="answer"
                   style={{
+                    fontSize: "1rem",
+                    fontWeight: "400",
+                    fontFamily: "Barlow",
                     paddingInline: "1.5re",
                     marginInline: "1.5rem",
                     color: answer.id === changeColor ? "#F4F1EB" : "#333D4B",
                   }}
                 >
+                  <input
+                    type="radio"
+                    name={answer.initial}
+                    value={answer.name}
+                    onChange={props.fun}
+                  />
                   {answer.description}
-                </p>
+                </label>
               </li>
             ))}
           </ul>

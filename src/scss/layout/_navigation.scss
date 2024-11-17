@@ -54,7 +54,7 @@
 .primary__navigation {
   transition: transform 350ms ease-out;
   &[data-visibility="false"] {
-    transform: translateX(700px);
+    transform: translateX(1000px);
     z-index: 9999;
     @include mq(medium) {
       transform: translateX(0);

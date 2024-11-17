@@ -22,8 +22,8 @@
   }
   .line {
     @include mq(medium) {
+      max-width: 697px;
       position: relative;
-      width: 760px;
       height: 1px;
       margin-block: 6rem;
       background-color: #fdd6ba;
@@ -37,6 +37,9 @@
         border-radius: 50%;
         border: 1px solid #0e8784;
       }
+    }
+    @include mq(large) {
+      max-width: 843px;
     }
   }
 }

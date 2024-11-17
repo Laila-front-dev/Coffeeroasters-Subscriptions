@@ -1,27 +1,37 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Icons from "./Icons";
 function Footer() {
+  const navLinks = ({ isActive }) => {
+    return {
+      color: isActive ? "#ffffff" : "#83888f",
+    };
+  };
+
   const logo = "./assets/images/shared/desktop/logo--footer.svg";
   const altLogo = "coffeeroasters logo";
   return (
     <footer className="container | bg-primary-800">
       <div className="footer__logo">
-        <Link to="/Coffeeroasters-Subscriptions/">
+        <Link to="/">
           <img src={logo} alt={altLogo} />
         </Link>
       </div>
       <nav>
         <ul>
           <li>
-            <Link to="/Coffeeroasters-Subscriptions/">home</Link>
+            <NavLink style={navLinks} to="/">
+              home
+            </NavLink>
           </li>
           <li>
-            <Link to="/Coffeeroasters-Subscriptions/about">about us</Link>
+            <NavLink style={navLinks} to="/about">
+              about us
+            </NavLink>
           </li>
           <li>
-            <Link to="/Coffeeroasters-Subscriptions/create">
+            <NavLink style={navLinks} to="/create">
               create your plan
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
