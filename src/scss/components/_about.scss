@@ -1,5 +1,6 @@
 @use "../abstracts/" as *;
 
+// about section
 .about__details {
   padding-block-start: 2rem;
   @include mq(large) {
