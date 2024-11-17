@@ -1,51 +1,41 @@
-name: Deploy
+name: CI Build and Artifact Upload
 
 on:
   push:
     branches:
       - main
+  pull_request:
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      # Step 1: Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
+      # Step 3: Install dependencies
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm install
 
+      # Step 4: Build the project
       - name: Build project
         run: npm run build
 
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v4
-        with:
-          name: production-files
-          path: ./dist
+      # Step 5: Verify build output (optional debugging)
+      - name: List build output
+        run: ls -R build/
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
+      # Step 6: Upload build artifacts
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
         with:
-          name: production-files
-          path: ./dist
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          name: build-artifact
+          path: build/
