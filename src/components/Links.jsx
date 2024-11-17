@@ -9,7 +9,7 @@ function Links() {
   return (
     <>
       <li>
-        <NavLink style={navLinks} to="/Coffeeroasters-Subscriptions/">
+        <NavLink style={navLinks} to="/Coffeeroasters-Subscriptions/" end>
           home
         </NavLink>
       </li>
