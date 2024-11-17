@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export function Button(props) {
   const linkButton = useNavigate();
   return (
-    <button onClick={() => linkButton("/create")} className="button">
+    <button onClick={() => linkButton("/Coffeeroasters-Subscriptions/create")} className="button">
       {props.name}
     </button>
   );
