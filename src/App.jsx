@@ -11,9 +11,9 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/create" element={<CreatePlane />}></Route>
+        <Route path="/Coffeeroasters-Subscriptions/" element={<Home />}></Route>
+        <Route path="/Coffeeroasters-Subscriptions/about" element={<About />}></Route>
+        <Route path="/Coffeeroasters-Subscriptions/create" element={<CreatePlane />}></Route>
         <Route path="*" element={<PageNoteFound />}></Route>
       </Routes>
       <Footer />
